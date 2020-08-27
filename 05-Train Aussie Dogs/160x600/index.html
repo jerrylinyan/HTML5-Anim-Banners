@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="ad.size" content="width=160,height=600" />
+    <script
+      type="text/javascript"
+      charset="utf-8"
+      src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_2.0.1_min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf-8"
+      src="https://s0.2mdn.net/ads/studio/cached_libs/timelinemax_2.0.1_min.js"
+    ></script>
+
+    <script type="text/javascript">
+      var clickTag = "https://www.hanrob.com.au/dog-training";
+    </script>
+    <style type="text/css">
+      @font-face {
+        font-family: "AvenirL";
+        src: url("assets/fonts/AvenirLTStd-Medium.otf") format("opentype");
+      }
+      @font-face {
+        font-family: "NexaRust";
+        src: url("assets/fonts/NexaRustSans-Black.otf") format("opentype");
+      }
+      @font-face {
+        font-family: "MarydaleR";
+        src: url("assets/fonts/Marydale-Regular.otf") format("opentype");
+      }
+    </style>
+  </head>
+  <body
+    style="width:160px;height:600px;margin:0 auto;padding:0;overflow:hidden;"
+  >
+    <div style="position:relative;height:600px;overflow:hidden;">
+      <a
+        href="javascript:void(window.open(window.clickTag))"
+        style="text-decoration:none"
+      >
+        <div
+          id="bg"
+          style="background: url(assets/img/bg-160x600.jpg) no-repeat right;background-size:cover;height:600px;"
+        ></div>
+        <div
+          id="bgColor"
+          style="width:160px;height:600px;position: absolute;background-color: #0077be;top:500px;-webkit-border-radius:300px 300px 0px 0px / 50px 50px 0px 0px;-moz-border-radius:300px 300px 0px 0px / 50px 50px 0px 0px; border-radius:300px 300px 0px 0px / 50px 50px 0px 0px;"
+        ></div>
+        <div
+          id="bgColorH"
+          style="width:160px;height:600px;position: absolute;background-color: #0077be;top:1100px;-webkit-border-radius:300px 300px 0px 0px / 50px 50px 0px 0px;-moz-border-radius:300px 300px 0px 0px / 50px 50px 0px 0px; border-radius:300px 300px 0px 0px / 50px 50px 0px 0px;"
+        ></div>
+        <div
+          id="desc1"
+          style="color:white;font-family:'AvenirL';font-size:24px;padding: 0 10px;text-align:right;position:absolute;top:10%;"
+        >
+          Each year,<br />we train more than
+          <span id="counter" style="font-family:NexaRust;font-size:28px;"
+            >1,600</span
+          ><br />
+          Aussie Dogs
+        </div>
+        <div
+          id="desc2"
+          style="color:white;font-family:'MarydaleR';font-size: 32px;position:absolute;padding:0 10px;text-align:center;top:30%;line-height:1.5;z-index:1;"
+        >
+          <span id="desc2-1" style="opacity:0;">Professional</span>
+          <span id="desc2-2" style="opacity:0;">Care for</span>
+          <span id="desc2-3" style="opacity:0;">our Friends</span>
+          <span id="desc2-4" style="opacity:0;">with Hair</span>
+        </div>
+        <div
+          id="book"
+          style="color:white;font-family:'AvenirL';font-size:14px;position:absolute;margin:0 10px;padding:10px;text-align:center;bottom:40px;line-height:1.2;background-color:#0f5394;opacity:0;z-index:1;"
+        >
+          BOOK DOG TRAINING NOW
+        </div>
+        <div id="logo" style="position:absolute;bottom:10px;padding:0;">
+          <img src="./assets/img/logo.png" />
+        </div>
+      </a>
+    </div>
+  </body>
+  <script>
+    var T1 = new TimelineMax({ repeat: -1, repeatDelay: 1 });
+
+    var counter = { var: 0 };
+    var tal = document.getElementById("counter");
+    var bg = document.getElementById("bg");
+    var bgColor = document.getElementById("bgColor");
+    var bgColorH = document.getElementById("bgColorH");
+    var desc1 = document.getElementById("desc1");
+    var desc21 = document.getElementById("desc2-1");
+    var desc22 = document.getElementById("desc2-2");
+    var desc23 = document.getElementById("desc2-3");
+    var desc24 = document.getElementById("desc2-4");
+    var book = document.getElementById("book");
+    var logo = document.getElementById("logo");
+
+    T1.to(counter, 1, {
+      var: 1600,
+      onUpdate: function() {
+        var nwc = numberWithCommas(counter.var);
+        tal.innerHTML = nwc;
+      },
+      ease: Linear.easeNone
+    })
+      .to(
+        bg,
+        1,
+        { backgroundPosition: "center", ease: Power1.easeInOut },
+        "-=1"
+      )
+      .to(desc1, 2, { opacity: 0, ease: Power1.easeInOut })
+      .to(logo, 0.3, { top: "10px", borderRadius: 0, ease: Power1.easeInOut })
+      .to(
+        bgColor,
+        0.3,
+        { top: 0, borderRadius: 0, ease: Power1.easeInOut },
+        "-=0.3"
+      )
+      .to(desc21, 1, { opacity: 1, ease: Power1.easeInOut })
+      .to(desc22, 0.5, { opacity: 1, ease: Power1.easeInOut })
+      .to(desc23, 0.5, { opacity: 1, ease: Power1.easeInOut })
+      .to(desc24, 0.5, { opacity: 1, ease: Power1.easeInOut })
+      .to(book, 1, { opacity: 1, ease: Power1.easeInOut })
+      .to(
+        logo,
+        0.3,
+        { top: "-65px", bottom: "auto", ease: Power1.easeInOut },
+        "+=1"
+      )
+      .to(bgColor, 0.3, { top: "-600px", ease: Power1.easeInOut }, "-=0.3")
+      .to(desc2, 0.3, { top: "-32%", ease: Power1.easeInOut }, "-=0.3")
+      .to(
+        book,
+        0.3,
+        { top: "-10%", bottom: "auto", ease: Power1.easeInOut },
+        "-=0.3"
+      )
+      .to(bg, 0, { backgroundPosition: "right", ease: Power1.easeInOut }, "-=1")
+      .to(logo, 0, { top: "auto", bottom: "-64px", ease: Power1.easeInOut })
+      .to(bgColorH, 0.3, { top: "500px", ease: Power1.easeInOut })
+      .to(
+        logo,
+        0.3,
+        { top: "auto", bottom: "10px", ease: Power1.easeInOut },
+        "-=0.3"
+      )
+      .to(desc1, 1, { opacity: 1, ease: Power1.easeInOut });
+
+    // .to(logo, 1, { opacity: 0, ease: Power1.easeInOut }, "+=1")
+    // .to(desc21, 1, { opacity: 0, ease: Power1.easeInOut }, "-=1")
+    // .to(desc22, 1, { opacity: 0, ease: Power1.easeInOut }, "-=1")
+    // .to(bg, 0, { backgroundPosition: "right", ease: Power1.easeInOut }, "-=1")
+    // .to(desc23, 1, { opacity: 0, ease: Power1.easeInOut }, "-=1")
+    // .to(desc24, 1, { opacity: 0, ease: Power1.easeInOut }, "-=1")
+    // .to(book, 1, { opacity: 0, ease: Power1.easeInOut }, "-=1")
+    // .add(curve)
+    // .to(logo, 0.5, {
+    //   opacity: 1,
+    //   top: "auto"
+    // })
+    // .to(desc1, 0.5, { opacity: 1, ease: Power1.easeInOut }, "-=0.5");
+
+    function numberWithCommas(n) {
+      var parts = n.toString().split(".");
+      return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    function curve() {
+      document.getElementById("logo").style.borderRadius =
+        "300px 300px 0px 0px / 50px 50px 0px 0px";
+    }
+  </script>
+</html>

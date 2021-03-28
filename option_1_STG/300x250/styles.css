@@ -1,0 +1,169 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#banner {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+[class^=scene] {
+  display: none;
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+[class^=scene] > div, [class^=scene] > img {
+  position: absolute;
+}
+
+.scene0 {
+  background-color: #ffffff;
+}
+.scene0 .background-1 {
+  background-image: url(sprites.png);
+  background-position: 0px 0px;
+  width: 600px;
+  height: 350px;
+  top: -70px;
+  left: -250px;
+}
+.scene0 .fraxel {
+  background-image: url(sprites.png);
+  background-position: 0px -355px;
+  width: 209px;
+  height: 300px;
+  top: -160px;
+  left: -300px;
+  transform: scale(0.8, 0.8);
+  opacity: 0;
+}
+.scene0 .headline-1 {
+  background-image: url(sprites.png);
+  background-position: -214px -355px;
+  width: 153px;
+  height: 199px;
+  top: 20px;
+  left: 15px;
+  opacity: 0;
+}
+.scene0 .background-2 {
+  background-image: url(sprites.png);
+  background-position: -605px 0px;
+  width: 300px;
+  height: 250px;
+  opacity: 0;
+}
+.scene0 .headline-2 {
+  background-image: url(sprites.png);
+  background-position: -372px -355px;
+  width: 196px;
+  height: 111px;
+  top: 26px;
+  left: 20px;
+  opacity: 0;
+}
+.scene0 .cta-group {
+  cursor: pointer;
+  left: 20px;
+  top: 197px;
+  opacity: 0;
+}
+.scene0 .cta-group .cta {
+  background-image: url(sprites.png);
+  background-position: -605px -311px;
+  width: 121px;
+  height: 33px;
+  position: absolute;
+  overflow: hidden;
+}
+.scene0 .cta-group .cta-hover {
+  background-image: url(sprites.png);
+  background-position: -715px -255px;
+  width: 121px;
+  height: 33px;
+  position: absolute;
+  opacity: 0;
+}
+.scene0 .cta-group .shine:after {
+  animation: shineEff 1s;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -210%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: rotate(130deg);
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0.23) 77%, rgba(255, 255, 255, 0.23) 92%, rgba(255, 255, 255, 0) 100%);
+}
+@keyframes shineEff {
+  from {
+    opacity: 1;
+    top: 0%;
+    left: -100%;
+    transition-property: left, top, opacity;
+    transition-timing-function: ease;
+  }
+  to {
+    opacity: 0;
+    top: 0%;
+    left: 150%;
+    transition-property: left, top, opacity;
+  }
+}
+.scene0 .logo {
+  background-image: url(sprites.png);
+  background-position: -605px -255px;
+  width: 105px;
+  height: 51px;
+  right: 0;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

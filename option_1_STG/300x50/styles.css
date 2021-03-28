@@ -1,0 +1,159 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#banner {
+  width: 300px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+[class^=scene] {
+  display: none;
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+[class^=scene] > div, [class^=scene] > img {
+  position: absolute;
+}
+
+.scene0 {
+  background-color: #ffffff;
+}
+.scene0 .background {
+  background-image: url(sprites.png);
+  background-position: 0px 0px;
+  width: 300px;
+  height: 50px;
+}
+.scene0 .headline-1 {
+  background-image: url(sprites.png);
+  background-position: 0px -55px;
+  width: 201px;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+  opacity: 0;
+}
+.scene0 .tandc {
+  background-image: url(sprites.png);
+  background-position: -206px -90px;
+  width: 55px;
+  height: 11px;
+  top: 28px;
+  right: 76px;
+  opacity: 0;
+}
+.scene0 .headline-2 {
+  background-image: url(sprites.png);
+  background-position: 0px -90px;
+  width: 201px;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+  opacity: 0;
+}
+.scene0 .cta-group {
+  cursor: pointer;
+  right: 82px;
+  top: 10px;
+  opacity: 0;
+}
+.scene0 .cta-group .cta {
+  background-image: url(sprites.png);
+  background-position: -240px -55px;
+  width: 29px;
+  height: 29px;
+  position: absolute;
+  overflow: hidden;
+}
+.scene0 .cta-group .cta-hover {
+  background-image: url(sprites.png);
+  background-position: -206px -55px;
+  width: 29px;
+  height: 29px;
+  position: absolute;
+  opacity: 0;
+}
+.scene0 .cta-group .shine:after {
+  animation: shineEff 1s;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  width: 70%;
+  height: 40%;
+  opacity: 0;
+  transform: rotate(130deg);
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0.23) 77%, rgba(255, 255, 255, 0.23) 92%, rgba(255, 255, 255, 0) 100%);
+}
+@keyframes shineEff {
+  from {
+    opacity: 1;
+    top: 30%;
+    left: -10%;
+    transition-property: left, top, opacity;
+    transition-timing-function: ease;
+  }
+  to {
+    opacity: 0;
+    top: 30%;
+    left: 70%;
+    transition-property: left, top, opacity;
+  }
+}
+.scene0 .logo {
+  background-image: url(sprites.png);
+  background-position: 0px -125px;
+  width: 46px;
+  height: 50px;
+  right: 0;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

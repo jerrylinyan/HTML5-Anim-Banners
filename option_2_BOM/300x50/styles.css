@@ -1,0 +1,126 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#banner {
+  width: 300px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+[class^=scene] {
+  display: none;
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+[class^=scene] > div, [class^=scene] > img {
+  position: absolute;
+}
+
+.scene0 {
+  background-color: #ffffff;
+}
+.scene0 .headline-1 {
+  background-image: url(sprites.png);
+  background-position: 0px -47px;
+  width: 133px;
+  height: 28px;
+  top: 3px;
+  left: 7px;
+}
+.scene0 .tandc {
+  background-image: url(sprites.png);
+  background-position: -89px -80px;
+  width: 38px;
+  height: 8px;
+  bottom: 3px;
+  left: 7px;
+}
+.scene0 .logo-1 {
+  background-image: url(sprites.png);
+  background-position: 0px -80px;
+  width: 84px;
+  height: 22px;
+  right: 8px;
+  bottom: 14px;
+}
+.scene0 .background {
+  background-color: #534891;
+  width: 0;
+  height: 50px;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+.scene0 .background .headline-2 {
+  background-image: url(sprites.png);
+  background-position: 0px 0px;
+  width: 136px;
+  height: 42px;
+  right: 158px;
+  top: 5px;
+  position: absolute;
+}
+.scene0 .background .cta-group {
+  cursor: pointer;
+  right: 107px;
+  top: 6px;
+  position: absolute;
+}
+.scene0 .background .cta-group #startColor text {
+  opacity: 0;
+}
+.scene0 .background .logo-2 {
+  background-image: url(sprites.png);
+  background-position: 0px -107px;
+  width: 83px;
+  height: 21px;
+  right: 8px;
+  bottom: 14px;
+  position: absolute;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="ad.size" content="width=300,height=600">
+    <title>Banner</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <script type="application/javascript">
+      var clickTag = 'https://www.google.com.au';
+    </script>
+</head>
+
+<body>
+<div id="banner"></div>
+
+<script id="template" type="text/template">
+    <div class="bg"></div>
+    <div class="scene0">
+        <video class="video" width="300" height="600" muted="muted" autoplay playsinline poster="./poster.png" style="object-fit: fill;">
+            <source id="mp4" type="video/mp4">
+            <source id="webm" type="video/webm">
+            <source id="ogg" type="video/ogg">
+            <img src="./backup.png" title="Your browser does not support the video tag."/>
+        </video>
+        <div class="headline-1"></div>
+        <div class="tandc"></div>
+        <div class="logo-1"></div>
+        <div class="background">
+            <div class="headline-2"></div>
+            <div class="cta-group">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="30" viewBox="0 0 120 30">
+                    <defs>
+                      <mask id="maskO">
+                        <rect id="maskerOrange" width="120" height="30" x="-120" y="0" rx="4" fill="#ffffff"/>
+                      </mask>
+                      <mask id="maskW">
+                        <rect id="maskerWhite" width="120" height="30" x="-120" y="0" rx="4" fill="#ffffff"/>
+                      </mask>
+                    </defs>
+                    
+                      <!-- this is the fixed color background with white as the fill, but the stroke changes -->
+                    <rect id="bgFixed" x="1" y="1" width="118" height="28" rx="4" fill="#534891" stroke="#fff" stroke-width="1.5"/>
+                  
+                      <!-- this text color changes based on the chosen color swatch-->
+                    <g id="startColor" fill="#ffffff" font-size="14">
+                        <text transform="translate(26.79 18.1)" style="font-size: 12px;fill: white;font-family: Brown-Bold, Brown;font-weight: 700">Learn more</text>
+                    </g>
+                  
+                    <g mask="url(#maskO)">
+                      <!-- this is the changeable color background based on the swatch click-->
+                        <rect id="bgChange1"  x="1" y="1" width="118" height="28"  rx="4" fill="#D73B00" stroke="#fff" stroke-width="1.5"/>
+                      
+                      <!-- this is the duplicate text group revealed by the masks it's always white -->
+                        <g id="end" fill="white" font-size="14">
+                          <text transform="translate(26.79 18.1)" style="font-size: 12px;fill: white;font-family: Brown-Bold, Brown;font-weight: 700">Learn more</text>
+                        </g>
+                    </g>	
+                    
+                    <g mask="url(#maskW)">
+                      <!-- this is the changeable color background based on the swatch click-->
+                        <rect id="bgChange2"  x="1" y="1" width="118" height="28"  rx="4" fill="#ffffff" stroke="#fff" stroke-width="1.5"/>
+                      
+                      <!-- this is the duplicate text group revealed by the masks it's always white -->
+                        <g id="end" fill="white" font-size="14">
+                          <text transform="translate(26.79 18.1)" style="font-size: 12px;fill: #534891;font-family: Brown-Bold, Brown;font-weight: 700">Learn more</text>
+                        </g> 
+                    </g>	
+                  </svg>
+            </div>
+            <div class="logo-2"></div>
+        </div>
+    </div>
+    <div id="bg-exit"></div>
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.js"></script>
+<script src="DrawSVGPlugin.min.js"></script>
+<script src="default.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="ad.size" content="width=320,height=50">
+    <title>Banner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/javascript">
+      var clickTag = 'https://www.google.com.au';
+    </script>
+</head>
+
+<body>
+  <a href="javascript:window.open(window.clickTag)">
+    <div id="banner"></div>
+  </a>
+
+<script id="template" type="text/template">
+    <div class="scene0">
+        <div class="headline-1"></div>
+        <div class="tandc"></div>
+        <div class="logo-1"></div>
+        <div class="background">
+            <div class="headline-2"></div>
+            <div class="cta-group">
+              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 64 64">
+                <defs>
+                  <mask id="maskO">
+                    <circle id="maskerOrange" cx="-32.0" cy="32.0" r="31.01" fill="#ffffff"/>
+                  </mask>
+                  <mask id="maskW">
+                    <circle id="maskerWhite" cx="-32.0" cy="32.0" r="31.01" fill="#ffffff"/>
+                  </mask>
+                </defs>
+
+                <circle id="bgFixed" cx="32" cy="32" r="31" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <g id="startColor" fill="#ffffff" font-size="14">
+                  <line x1="22" y1="16" x2="47" y2="33" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+                  <line x1="22" y1="46" x2="48" y2="33" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+                </g>
+               
+                <g mask="url(#maskO)">
+                    <!-- this is the changeable color background based on the swatch click-->
+                    <circle id="bgChange1" cx="32" cy="32" r="31" fill="#D73B00" stroke="#fff" stroke-width="2"/>
+                    <!-- this is the duplicate text group revealed by the masks it's always white -->
+                    <g id="end" fill="white">
+                      <line x1="22" y1="16" x2="47" y2="33" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+                      <line x1="22" y1="46" x2="48" y2="33" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+                    </g>
+                </g>	
+                
+                <circle cx="32" cy="32" r="31" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="22" y1="16" x2="47" y2="33" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+                <line x1="22" y1="46" x2="48" y2="33" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+
+                <g mask="url(#maskW)">
+                    <!-- this is the changeable color background based on the swatch click-->
+                    <circle id="bgChange2" cx="32" cy="32" r="31" fill="#ffffff" stroke="#fff" stroke-width="2"/>
+                    <!-- this is the duplicate text group revealed by the masks it's always white -->
+                    <g id="end" fill="white">
+                      <line x1="22" y1="16" x2="47" y2="33" style="fill: none;stroke: #534891;stroke-miterlimit: 10;stroke-width: 4px"/>
+                      <line x1="22" y1="46" x2="48" y2="33" style="fill: none;stroke: #534891;stroke-miterlimit: 10;stroke-width: 4px"/>
+                    </g>
+                </g>	
+              </svg>
+            </div>
+            <div class="logo-2"></div>
+        </div>
+    </div>
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.js"></script>
+<script src="default.js"></script>
+</body>
+</html>

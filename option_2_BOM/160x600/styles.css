@@ -1,0 +1,152 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@font-face {
+  font-family: "Brown-Bold";
+  src: url("./Brown-Bold.eot");
+  src: url("./Brown-Bold.eot?#iefix") format("embedded-opentype"), url("./Brown-Bold.woff2") format("woff2"), url("./Brown-Bold.woff") format("woff"), url("./Brown-Bold.ttf") format("truetype"), url("./Brown-Bold.svg#Brown-Bold") format("svg");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#bg-exit {
+  cursor: pointer;
+  width: 160px;
+  height: 600px;
+  z-index: 99999;
+  position: absolute;
+}
+
+.hide {
+  display: none;
+}
+
+#banner {
+  width: 160px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+[class^=scene] {
+  display: none;
+  width: 160px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+[class^=scene] > div, [class^=scene] > img {
+  position: absolute;
+}
+
+.bg {
+  position: absolute;
+  width: 160px;
+  height: 600px;
+  left: 0;
+  top: 0;
+  z-index: -100;
+}
+
+.scene0 {
+  background-color: #ffffff;
+}
+.scene0 .headline-1 {
+  background-image: url(sprites.png);
+  background-position: -131px 0px;
+  width: 131px;
+  height: 93px;
+  top: 100px;
+  left: 15px;
+}
+.scene0 .tandc {
+  background-image: url(sprites.png);
+  background-position: -131px -134px;
+  width: 50px;
+  height: 11px;
+  bottom: 80px;
+  left: 15px;
+}
+.scene0 .logo-1 {
+  background-image: url(sprites.png);
+  background-position: -131px -98px;
+  width: 120px;
+  height: 31px;
+  right: 25px;
+  bottom: 20px;
+}
+.scene0 .background {
+  background-color: #534891;
+  width: 0;
+  height: 600px;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+.scene0 .background .headline-2 {
+  background-image: url(sprites.png);
+  background-position: 0px 0px;
+  width: 126px;
+  height: 147px;
+  top: 100px;
+  right: 21px;
+  position: absolute;
+}
+.scene0 .background .cta-group {
+  cursor: pointer;
+  right: 28px;
+  top: 280px;
+  position: absolute;
+}
+.scene0 .background .cta-group #startColor text {
+  opacity: 0;
+}
+.scene0 .background .logo-2 {
+  background-image: url(sprites.png);
+  background-position: 0px -152px;
+  width: 120px;
+  height: 31px;
+  right: 25px;
+  bottom: 20px;
+  position: absolute;
+}
+
+/*# sourceMappingURL=styles.css.map */
